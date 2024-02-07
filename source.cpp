@@ -1,44 +1,59 @@
 #include <iostream>
+
+#include <string>
+
+#include <fstream>
+
 using namespace std;
 
-int welcomeScreen();	
+int welcomeScreen();
 int encodeMessage();
 int decodeMessage();
 
-int testing;
-string fileChoice;
-
 int main() {
-	cout << "ImageLock Suite V1";
-	welcomeScreen();
+  cout << "Secure Message Suite";
+  welcomeScreen();
 }
 
-int welcomeScreen() { //Allows the user to choose if they would like to encode or decode a message. Add nothing else here.
-	int EncodeOrDecode;
-	cout << "\nWould you like to ENCODE (1) or DECODE (2) text into an image file?\nInput: ";
-	cin >> EncodeOrDecode;
-	if (EncodeOrDecode == 1) {
-		encodeMessage();
-	}
-	if (EncodeOrDecode == 2) {
-		decodeMessage();
-	}
-	else
-	{
-		cout << "Invalid value. Please try again.";
-		welcomeScreen();
-	}
-	return EncodeOrDecode;
+int welcomeScreen() {
+  int EncodeOrDecode;
+  cout << "\nWould you like to ENCODE (1) or DECODE (2) a secret message?\nInput: ";
+  cin >> EncodeOrDecode;
+  if (EncodeOrDecode == 1) {
+    encodeMessage();
+  }
+  if (EncodeOrDecode == 2) {
+    decodeMessage();
+  } else {
+    cout << "Invalid value. Please try again.";
+    welcomeScreen();
+  }
+  return EncodeOrDecode;
 }
 
 int encodeMessage() {
-	cout << "What (image) file would you like to encode a message into?\nInput: ";
-	cin >> fileChoice;
-	return 0;
+  string textToFile;
+  string userEI, userEKey;
+
+  ofstream EncodedFile("encoded_file.txt");
+  cout << "Enter text into file: ";
+  cin >> textToFile;
+  EncodedFile << textToFile;
+  EncodedFile.close();
+  string myText;
+  ifstream ConfirmEncode("encoded_file.txt");
+  while (getline(ConfirmEncode, myText)) {
+    cout << myText;
+  }
+  ConfirmEncode.close();
+  return 0;
 }
 
 int decodeMessage() {
-	cout << "What (image) file would you like to decode?\nInput: ";
-	cin >> fileChoice;
-	return 0;
+  string userDI, userDKey;
+  cout << "\nWould you like to decode manually (1) or with a text file (2)?\nInput: ";
+
+  cin >> userDI;
+
+  return 0;
 }
