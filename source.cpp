@@ -34,11 +34,11 @@ int welcomeScreen() { //Allows the user to choose if they would like to encode o
 int encodeMessage() {
 	cout << "What (image) file would you like to encode a message into?\nInput: ";
 	cin >> fileChoice;
-	//return fileChoice;
+	return 0;
 }
 
 int decodeMessage() {
 	cout << "What (image) file would you like to decode?\nInput: ";
 	cin >> fileChoice;
-	//return fileChoice;
+	return 0;
 }
