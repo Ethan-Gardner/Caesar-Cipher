@@ -5,4 +5,4 @@
 - [x] Flawless
 
 ## How it works:
-Everything you've ever seen online says that for an encryption to be completely secure, the private key has to be random. **It doesn't.**
+You probably think that for an encryption to be completely secure, the private key has to be random. **It doesn't.**
