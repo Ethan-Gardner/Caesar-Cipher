@@ -12,18 +12,13 @@ By shifting the values of letters by a certain amoumt, a basic encryption is cre
 > If you can't understand the rest of the code in the ***cipher.cpp*** file, you shouldn't be messing with this (yet).
 ```
 string encrypt(string text, int s) {
-    string result;
-
-    for (int i = 0; i < text.length(); i++) {
-
-        if (isupper(text[i]))
-            result += char(int(text[i] + s - 'A') % 26 + 'A');
-
-        else
-            result += char(int(text[i] + s - 'a') % 26 + 'a');
-    }
-
-    return result;
+  string result;
+  for (int i = 0; i < text.length(); i++) {
+    if (isupper(text[i]))
+      result += char(int(text[i] + s - 'A') % 26 + 'A');
+    else result += char(int(text[i] + s - 'a') % 26 + 'a');
+  }
+  return result;
 }
 ```
 
@@ -47,3 +42,15 @@ This line starts a loop that iterates over each character in the input text stri
 **Line 4:** `if (isupper(text[i]))`
 
 This condition checks if the current character at index `i` in the `text` string is an uppercase letter.
+
+**Line 5:** `result += char(int(text[i] + s - 'A') % 26 + 'A');`
+
+If the character is uppercase, this line performs the encryption process for uppercase letters. It shifts the character by the value of s, wraps around if needed (using modulo 26), and converts it back to a character. The result is then appended to the result string.
+
+**Line 6:** `else result += char(int(text[i] + s - 'a') % 26 + 'a');`
+
+If the character is not uppercase (i.e., it is lowercase), this line performs the encryption process for lowercase letters. Similar to the uppercase case, it shifts the character by s, wraps around if needed, and converts it back to a character. The result is then appended to the result string.
+
+**Line 8:** `return result;`
+
+After processing all characters in the input text, the function returns the final encrypted string stored in the result variable.
