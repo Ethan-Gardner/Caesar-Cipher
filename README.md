@@ -1,4 +1,4 @@
-# Encryption 102
+# Basic Caesar Cipher
 **A revolutionary uncrackable encoding method that doesn't rely on randomness.**
 - Meant to be able to be sent through text, e-mail, files, and everything else.
 - Can be coded on any language without using external libraries.
