@@ -8,6 +8,7 @@ By shifting the values of letters by a certain amoumt, a basic encryption is cre
 
 **ABCDEFGHIJKLMNOPQRSTUVWXYZ → BCDEFGHIJKLMNOPQRSTUVWXYZA**
 # Explaining the Code (Line by Line)
+> [!TIP]
 > All of the code before this should be easy to understand. If it isn't, learn more C++ code before trying to understand this.
 ```
 string encrypt(string text, int s) {
@@ -25,8 +26,8 @@ string encrypt(string text, int s) {
     return result;
 }
 ```
-The `s` integer is being passed from the user input in `encryptMenu` function.
-
+> [!NOTE]
+>The `s` integer is being passed from the user input in `encryptMenu` function.
 The `text` string is also being passed from the same `encryptMenu` function.
 
 ## Explanation:
@@ -41,3 +42,7 @@ This line declares an empty string variable named result. This variable will sto
 **Line 3:** `for (int i = 0; i < text.length(); i++) {`
 
 This line starts a loop that iterates over each character in the input text string. It initializes an integer `i` to 0 and continues looping until `i` reaches the length of the `text` string.
+
+**Line 4:** `if (isupper(text[i]))`
+
+This condition checks if the current character at index `i` in the `text` string is an uppercase letter.
