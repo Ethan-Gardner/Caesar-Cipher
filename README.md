@@ -1,5 +1,5 @@
 # Basic Caesar Cipher
-**A revolutionary uncrackable encoding method that doesn't rely on randomness.**
+**Extremely easy to code, and even easier to crack.**
 - Meant to be able to be sent through text, e-mail, files, and everything else.
 - Can be coded on any language without using external libraries.
 - Completely secure. Real E2E encryption. **No government spying.**
