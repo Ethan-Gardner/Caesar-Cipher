@@ -1,4 +1,4 @@
-# Basic Caesar Cipher (In CPP)
+# Basic Caesar Cipher (In C++)
 **Extremely easy to code, and even easier to crack.**
 - Meant to be able to be sent through text, e-mail, files, and everything else.
 - Can be encoded easily anywhere, anytime.
