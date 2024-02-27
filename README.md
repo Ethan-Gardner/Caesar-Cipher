@@ -8,8 +8,8 @@ By shifting the values of letters by a certain amoumt, a basic encryption is cre
 
 **ABCDEFGHIJKLMNOPQRSTUVWXYZ → BCDEFGHIJKLMNOPQRSTUVWXYZA**
 # Explaining the Code (Line by Line)
-> [!TIP]
-> All of the code before this should be easy to understand. If it isn't, learn more C++ code before trying to understand this.
+> [!IMPORTANT]
+> If you can't understand the rest of the code in the ***cipher.cpp*** file, you shouldn't be messing with this (yet).
 ```
 string encrypt(string text, int s) {
     string result;
@@ -26,9 +26,10 @@ string encrypt(string text, int s) {
     return result;
 }
 ```
-> [!NOTE]
->The `s` integer is being passed from the user input in `encryptMenu` function.
-The `text` string is also being passed from the same `encryptMenu` function.
+
+> The `s` integer is being passed from the user input in `encryptMenu` function.
+> 
+> The `text` string is also being passed from the same `encryptMenu` function.
 
 ## Explanation:
 **Line 1:** `string encrypt(string text, int s) {`
