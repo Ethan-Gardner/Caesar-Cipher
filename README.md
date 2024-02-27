@@ -25,3 +25,6 @@ string encrypt(string text, int s) {
     return result;
 }
 ```
+The `s` integer is being passed from the user input in `encryptMenu` function.
+
+The `text` string is also being passed from the same `encryptMenu` function.
