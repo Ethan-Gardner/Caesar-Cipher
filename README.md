@@ -4,4 +4,6 @@
 - Can be encoded easily anywhere, anytime.
 - Completely unsecure. **Can be cracked with a pencil and paper.**
 ## How it works:
-You probably think that for an encryption to be completely secure, the private key has to be random. **It doesn't.**
+By shifting the values of letters by a certain amoumt, a basic encryption is created.
+
+**ABCDEFGHIJKLMNOPQRSTUVWXYZ -> BCDEFGHIJKLMNOPQRSTUVWXYZA**
