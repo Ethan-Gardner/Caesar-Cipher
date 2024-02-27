@@ -6,4 +6,4 @@
 ## How it works:
 By shifting the values of letters by a certain amoumt, a basic encryption is created.
 
-**ABCDEFGHIJKLMNOPQRSTUVWXYZ -> BCDEFGHIJKLMNOPQRSTUVWXYZA**
+**ABCDEFGHIJKLMNOPQRSTUVWXYZ → BCDEFGHIJKLMNOPQRSTUVWXYZA**
