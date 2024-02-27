@@ -1,64 +1,41 @@
 #include <iostream>
-#include <string>
-#include <fstream>
-#include <bitset>
 
 using namespace std;
 
-int welcomeScreen();	
-int encodeMessage();
-int decodeMessage();
+string encrypt(string text, int s);
+int encryptMenu();
 
 int main() {
-	cout << "Secure Message Suite";
-	welcomeScreen();
+    cout << "Caesarean (Substitution) Cipher";
+    encryptMenu();
 }
 
-int welcomeScreen() {
-	int EncodeOrDecode;
-	cout << "\nWould you like to ENCODE (1) or DECODE (2) a secret message?\nInput: ";
-	cin >> EncodeOrDecode;
-	if (EncodeOrDecode == 1) {
-		encodeMessage();
-	}
-	if (EncodeOrDecode == 2) {
-		decodeMessage();
-	}
-	else
-	{
-		cout << "Invalid value. Please try again.";
-		welcomeScreen();
-	}
-	return EncodeOrDecode;
+int encryptMenu() {
+    string text;
+    int s;
+
+    cout << "\n[ENCODE] Input your message: ";
+    cin >> text;
+    cout << "[ENCODE] Shift your message: ";
+    cin >> s;
+
+    cout << "Text : " << text;
+    cout << "\nShift: " << s;
+    cout << "\nCipher: " << encrypt(text, s);
+    return 0;
 }
 
-int encodeMessage() {
-	string userEI, userEKey, textToFile, myText;
-	ofstream EncodedFile("encoded_file.txt");
+string encrypt(string text, int s) {
+    string result;
 
+    for (int i = 0; i < text.length(); i++) {
 
-	cout << "Enter your message: ";
-	cin >> userEI;
-	cout << "(Only share with recipient) Secret Key: ";
-		cin >> userEKey;
-	cin >> textToFile;
-	EncodedFile << textToFile;
-	EncodedFile.close();
+        if (isupper(text[i]))
+            result += char(int(text[i] + s - 'A') % 26 + 'A');
 
+        else
+            result += char(int(text[i] + s - 'a') % 26 + 'a');
+    }
 
-	ifstream ConfirmEncode("encoded_file.txt");
-	while (getline(ConfirmEncode, myText)) {
-		cout << myText;
-	}
-	ConfirmEncode.close();
-	return 0;
-}
-
-int decodeMessage() {
-	string userDI, userDKey;
-	cout << "\nWould you like to decode manually (1) or with a text file (2)?\nInput: ";
-
-	cin >> userDI;
-	
-	return 0;
+    return result;
 }
