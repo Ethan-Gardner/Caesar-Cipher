@@ -28,3 +28,16 @@ string encrypt(string text, int s) {
 The `s` integer is being passed from the user input in `encryptMenu` function.
 
 The `text` string is also being passed from the same `encryptMenu` function.
+
+## Explanation:
+**Line 1:** `string encrypt(string text, int s) {`
+
+This line defines a function named encrypt that takes two parameters: a string `text` to be encrypted and an integer `s` which represents the shift value for the encryption algorithm.
+
+**Line 2:** `string result;`
+
+This line declares an empty string variable named result. This variable will store the encrypted text as the algorithm processes the input text.
+
+**Line 3:** `for (int i = 0; i < text.length(); i++) {`
+
+This line starts a loop that iterates over each character in the input text string. It initializes an integer `i` to 0 and continues looping until `i` reaches the length of the `text` string.
