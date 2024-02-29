@@ -49,7 +49,7 @@ If the character is uppercase, this line performs the encryption process for upp
 
 **Line 6:** `else result += char(int(text[i] + s - 'a') % 26 + 'a');`
 
-If the character is not uppercase (i.e., it is lowercase), this line performs the encryption process for lowercase letters. Similar to the uppercase case, it shifts the character by `s`, wraps around if needed, and converts it back to a character. The result is then appended to the result string.
+If the character is not uppercase (i.e., it is lowercase), this line performs the encryption process for lowercase letters. Similar to the uppercase case, it shifts the character by `s`, wraps around if needed, and converts it back to a character. The result is then appended to the `result` string.
 
 **Line 8:** `return result;`
 
