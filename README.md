@@ -53,7 +53,6 @@ If the character is not uppercase (i.e., it is lowercase), this line performs th
 
 **Line 7:** `
 `
-
 *Blank space for formatting purposes.*
 
 **Line 8:** `return result;`
