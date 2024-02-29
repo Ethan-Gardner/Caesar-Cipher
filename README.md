@@ -60,12 +60,3 @@ If the character is not uppercase (i.e., it is lowercase), this line performs th
 After processing all characters in the input text, the function returns the final encrypted string stored in the `result` variable.
 
 [^1]: The modulo operator (also known as the modulus operator), denoted by %, is an arithmetic operator. The modulo division operator produces the remainder of an integer division which is also called the modulus of the operation.
-
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
