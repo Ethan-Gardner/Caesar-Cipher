@@ -29,11 +29,11 @@ string encrypt(string text, int s) {
 ## Explanation:
 **Line 1:** `string encrypt(string text, int s) {`
 
-This line defines a function named encrypt that takes two parameters: a string `text` to be encrypted and an integer `s` which represents the shift value for the encryption algorithm.
+This line defines a function named `encrypt` that takes two parameters: a string `text` to be encrypted and an integer `s` which represents the shift value for the encryption algorithm.
 
 **Line 2:** `string result;`
 
-This line declares an empty string variable named result. This variable will store the encrypted text as the algorithm processes the input text.
+This line declares an empty string variable named `result`. This variable will store the encrypted text as the algorithm processes the input text.
 
 **Line 3:** `for (int i = 0; i < text.length(); i++) {`
 
