@@ -45,11 +45,11 @@ This condition checks if the current character at index `i` in the `text` string
 
 **Line 5:** `result += char(int(text[i] + s - 'A') % 26 + 'A');`
 
-If the character is uppercase, this line performs the encryption process for uppercase letters. It shifts the character by the value of s, wraps around if needed (using modulo 26), and converts it back to a character. The result is then appended to the result string.
+If the character is uppercase, this line performs the encryption process for uppercase letters. It shifts the character by the value of `s`, wraps around if needed (using modulo 26), and converts it back to a character. The result is then appended to the result string.
 
 **Line 6:** `else result += char(int(text[i] + s - 'a') % 26 + 'a');`
 
-If the character is not uppercase (i.e., it is lowercase), this line performs the encryption process for lowercase letters. Similar to the uppercase case, it shifts the character by s, wraps around if needed, and converts it back to a character. The result is then appended to the result string.
+If the character is not uppercase (i.e., it is lowercase), this line performs the encryption process for lowercase letters. Similar to the uppercase case, it shifts the character by `s`, wraps around if needed, and converts it back to a character. The result is then appended to the result string.
 
 **Line 8:** `return result;`
 
