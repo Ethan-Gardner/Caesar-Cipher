@@ -9,3 +9,10 @@ By shifting the values of letters by a certain amoumt, a basic encryption is cre
 **ABCDEFGHIJKLMNOPQRSTUVWXYZ → BCDEFGHIJKLMNOPQRSTUVWXYZA**
 # 	Explaining the Code (Line by Line)
 > Coming soon...
+```mermaid
+erDiagram
+  ENTITY ||--o{ USER : enters
+  USER ||--o{ TEXT : provides
+  USER ||--o{ SHIFT : selects
+  TEXT ||--o{ CIPHER : encrypts
+```
