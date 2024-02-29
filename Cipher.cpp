@@ -1,40 +1,45 @@
 #include <iostream>
+
+#include <string>
+
 using namespace std;
 
-string encrypt(string text, int s);
-int encryptMenu();
+string encrypt(const string & text, int s); // Use const reference for efficiency
+void encryptMenu();
 
 int main() {
-    cout << "Caesarean (Substitution) Cipher";
-    encryptMenu();
+  cout << "Caesarean (Substitution) Cipher";
+  encryptMenu();
 }
 
-int encryptMenu() {
-    string text;
-    int s;
+void encryptMenu() { //Using void instead of string, because no "return" value is needed
+  string text;
+  int s;
 
-    cout << "\n[ENCODE] Input your message: ";
-    cin >> text;
-    cout << "[ENCODE] Shift your message: ";
-    cin >> s;
+  cout << "\n[ENCODE] Input your message: ";
+  cin >> text;
+  cout << "[ENCODE] Shift your message: ";
+  cin >> s;
 
-    cout << "Text : " << text;
-    cout << "\nShift: " << s;
-    cout << "\nCipher: " << encrypt(text, s);
-    return 0;
+  cout << "Text : " << text <<
+    "\nShift: " << s <<
+    "\nCipher: " << encrypt(text, s) << endl; // Print newline for clarity
 }
 
-string encrypt(string text, int s) {
-    string result;
+string encrypt(const string & text, int s) {
+  string result;
+  const int textSize = text.length(); // Cache the length to avoid recalculating
 
-    for (int i = 0; i < text.length(); i++) {
+  for (int i = 0; i < textSize; i++) {
+    char currentChar = text[i];
 
-        if (isupper(text[i]))
-            result += char(int(text[i] + s - 'A') % 26 + 'A');
-
-        else
-            result += char(int(text[i] + s - 'a') % 26 + 'a');
+    if (isalpha(currentChar)) {
+      char base = isupper(currentChar) ? 'A' : 'a';
+      result += static_cast < char > ((currentChar - base + s) % 26 + base);
+    } else {
+      result += currentChar; // Preserve non-alphabetic characters
     }
+  }
 
-    return result;
+  return result;
 }
