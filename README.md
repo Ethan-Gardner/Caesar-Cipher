@@ -8,7 +8,7 @@ By shifting the values of letters by a certain amoumt, a basic encryption is cre
 
 **ABCDEFGHIJKLMNOPQRSTUVWXYZ → BCDEFGHIJKLMNOPQRSTUVWXYZA**
 # 	Explaining the Code (Line by Line)
-> Coming soon...
+> So far all we have is a fun flow chart!
 ```mermaid
 erDiagram
   ENTITY ||--o{ USER : enters
