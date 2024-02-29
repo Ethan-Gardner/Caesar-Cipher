@@ -7,9 +7,11 @@
 By shifting the values of letters by a certain amoumt, a basic encryption is created.
 
 **ABCDEFGHIJKLMNOPQRSTUVWXYZ → BCDEFGHIJKLMNOPQRSTUVWXYZA**
-# Explaining the Code (Line by Line)
+> [!CAUTION]
+> The explanation below is for a previous version of the code, and is no longer valid.
+# 	~~Explaining the Code (Line by Line)~~
 > [!IMPORTANT]
-> If you can't understand the rest of the code in the ***cipher.cpp*** file, you shouldn't be messing with this (yet).
+> ~~If you can't understand the rest of the code in the ***cipher.cpp*** file, you shouldn't be messing with this (yet).~~
 ```
 string encrypt(string text, int s) {
   string result;
@@ -22,41 +24,41 @@ string encrypt(string text, int s) {
 }
 ```
 
-> The `s` integer is being passed from the user input in `encryptMenu` function.
+~~> The `s` integer is being passed from the user input in `encryptMenu` function.~~
 > 
-> The `text` string is also being passed from the same `encryptMenu` function.
+~~> The `text` string is also being passed from the same `encryptMenu` function.~~
 
-## Explanation:
-**Line 1:** `string encrypt(string text, int s) {`
+## ~~Explanation:~~
+~~**Line 1:** `string encrypt(string text, int s) {`~~
 
-This line defines a function named `encrypt` that takes two parameters: a string `text` to be encrypted and an integer `s` which represents the shift value for the encryption algorithm.
+~~This line defines a function named `encrypt` that takes two parameters: a string `text` to be encrypted and an integer `s` which represents the shift value for the encryption algorithm.~~
 
-**Line 2:** `string result;`
+~~**Line 2:** `string result;`~~
 
-This line declares an empty string variable named `result`. This variable will store the encrypted text as the algorithm processes the input text.
+~~This line declares an empty string variable named `result`. This variable will store the encrypted text as the algorithm processes the input text.~~
 
-**Line 3:** `for (int i = 0; i < text.length(); i++) {`
+~~**Line 3:** `for (int i = 0; i < text.length(); i++) {`~~
 
-This line starts a loop that iterates over each character in the input text string. It initializes an integer `i` to 0 and continues looping until `i` reaches the length of the `text` string.
+~~This line starts a loop that iterates over each character in the input text string. It initializes an integer `i` to 0 and continues looping until `i` reaches the length of the `text` string.~~
 
-**Line 4:** `if (isupper(text[i]))`
+~~**Line 4:** `if (isupper(text[i]))`~~
 
-This condition checks if the current character at index `i` in the `text` string is an uppercase letter.
+~~This condition checks if the current character at index `i` in the `text` string is an uppercase letter.~~
 
-**Line 5:** `result += char(int(text[i] + s - 'A') % 26 + 'A');`
+~~**Line 5:** `result += char(int(text[i] + s - 'A') % 26 + 'A');`~~
 
-If the character is uppercase, this line performs the encryption process for uppercase letters. It shifts the character by the value of `s`, wraps around if needed (using modulo[^1] 26), and converts it back to a character. The result is then appended to the `result` string.
+~~If the character is uppercase, this line performs the encryption process for uppercase letters. It shifts the character by the value of `s`, wraps around if needed (using modulo[^1] 26), and converts it back to a character. The result is then appended to the `result` string.~~
 
-**Line 6:** `else result += char(int(text[i] + s - 'a') % 26 + 'a');`
+~~**Line 6:** `else result += char(int(text[i] + s - 'a') % 26 + 'a');`~~
 
-If the character is not uppercase (i.e., it is lowercase), this line performs the encryption process for lowercase letters. Similar to the uppercase case, it shifts the character by `s`, wraps around if needed, and converts it back to a character. The result is then appended to the `result` string.
+~~If the character is not uppercase (i.e., it is lowercase), this line performs the encryption process for lowercase letters. Similar to the uppercase case, it shifts the character by `s`, wraps around if needed, and converts it back to a character. The result is then appended to the `result` string.~~
 
-**Line 7:** `
-`
-*Blank space for formatting purposes.*
+~~**Line 7:** `~~
+~~`~~
+~~*Blank space for formatting purposes.*~~
 
-**Line 8:** `return result;`
+~~**Line 8:** `return result;`~~
 
-After processing all characters in the input text, the function returns the final encrypted string stored in the `result` variable.
+~~After processing all characters in the input text, the function returns the final encrypted string stored in the `result` variable.~~
 
-[^1]: The modulo operator (also known as the modulus operator), denoted by %, is an arithmetic operator. The modulo division operator produces the remainder of an integer division which is also called the modulus of the operation.
+[^1]: ~~The modulo operator (also known as the modulus operator), denoted by %, is an arithmetic operator. The modulo division operator produces the remainder of an integer division which is also called the modulus of the operation.~~
