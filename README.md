@@ -51,6 +51,11 @@ If the character is uppercase, this line performs the encryption process for upp
 
 If the character is not uppercase (i.e., it is lowercase), this line performs the encryption process for lowercase letters. Similar to the uppercase case, it shifts the character by `s`, wraps around if needed, and converts it back to a character. The result is then appended to the `result` string.
 
+**Line 7:** `
+`
+
+*Blank space for formatting purposes.*
+
 **Line 8:** `return result;`
 
 After processing all characters in the input text, the function returns the final encrypted string stored in the `result` variable.
