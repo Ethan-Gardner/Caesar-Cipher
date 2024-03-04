@@ -20,11 +20,11 @@ void encryptMenu() {
 
     cout << "Shift your message: ";
     cin >> s;
- 
-    while (!std::cin) { // Error Checking
+
+    while (!cin) {
         cin.clear();
-        cin.ignore(10000, '\n'); //10000 is a random big value
-        cout << "Invalid input. Enter an integer.\n Shift your message: ";
+        cin.ignore(10000, '\n');
+        cout << "\nInvalid input. Enter an integer.\nShift your message: ";
         cin >> s;
 
     }
