@@ -22,31 +22,40 @@ This line declares a constant integer variable named `textSize` and assigns it t
 ### `for (int i = 0; i < textSize; i++) {`
 
 This line starts a for loop that iterates over each character in the text string. The loop variable i is initialized to 0, and the loop continues as long as i is less than textSize. After each iteration, i is incremented by 1.
-char currentChar = text[i];
+
+### `char currentChar = text[i];`
 
 This line assigns the character at index i in the text string to the variable currentChar. This allows us to access and process each character in the string one by one.
-if (isalpha(currentChar)) {
+
+### `if (isalpha(currentChar)) {`
 
 This line checks if the currentChar is an alphabetic character (a letter). The isalpha function returns true if the character is a letter and false otherwise.
-char base = isupper(currentChar) ? 'A' : 'a';
+
+### `char base = isupper(currentChar) ? 'A' : 'a';`
 
 This line assigns the character 'A' to the variable base if currentChar is an uppercase letter, and assigns the character 'a' if currentChar is a lowercase letter. This determines the base character for shifting.
-result += static_cast <char> ((currentChar - base + s) % 26 + base);
+
+### `result += static_cast <char> ((currentChar - base + s) % 26 + base);`
 
 This line performs the shifting operation on the currentChar and appends the shifted character to the result string. The shifting is done by subtracting the base character, adding the shift value s, taking the modulo 26 to wrap around the alphabet, and then adding the base character back.
-else {
+
+### `else {`
 
 This line is the start of the else block, which executes if the currentChar is not an alphabetic character.
-result += currentChar;
+
+### `result += currentChar;`
 
 This line appends the currentChar to the result string without any modification since it is not an alphabetic character.
-}
+
+### `}`
 
 This line marks the end of the if-else block.
-}
+
+### `}`
 
 This line marks the end of the for loop.
-return result;
+
+### `return result;`
 
 This line returns the final shifted string result from the shift function.
 
